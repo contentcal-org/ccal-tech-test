@@ -25,6 +25,7 @@
   },
   "projects": {
     "idea-board": { "tags": [] },
-    "idea-board-e2e": { "tags": [], "implicitDependencies": ["idea-board"] }
+    "idea-board-e2e": { "tags": [], "implicitDependencies": ["idea-board"] },
+    "core": { "tags": [] }
   }
 }

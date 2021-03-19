@@ -1,0 +1,14 @@
+.login {
+  &__logo {
+    margin-bottom: var(--spacing-medium);
+  }
+  &__title {
+    margin-bottom: var(--spacing-small);
+  }
+  &__tip {
+    color: var(--text-lightest-color);
+  }
+  &__input {
+    margin-bottom: var(--spacing-medium);
+  }
+}

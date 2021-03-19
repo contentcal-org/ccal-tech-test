@@ -1,4 +1,4 @@
-.cc-badge {
+.badge {
   align-items: center;
   background-color: var(--components-bg-color);
   border: var(--border);
@@ -16,7 +16,7 @@
 
 // Solid
 // ... no border and solid background color
-.cc--badge--solid {
+.badge--solid {
   background-color: var(--shade-4);
   border: 0 none;
   color: #ffffff;
@@ -24,7 +24,7 @@
 
 // Bordered
 // ... with transparent background
-.cc--badge--transparent {
+.badge--transparent {
   background-color: transparent;
   border: 1px solid var(--text-color);
   color: var(--text-color);
@@ -32,28 +32,28 @@
 
 // Pills
 // ... with rounded left and right ends
-.cc--badge--pill {
+.badge--pill {
   border-radius: 2em;
 }
 
 // Sizes
 // ... default to small
-.cc--badge--tiny {
+.badge--tiny {
   font-size: var(--font-size-tiny);
   height: var(--sizing-tiny);
   line-height: var(--sizing-tiny);
 }
-.cc--badge--xsmall {
+.badge--xsmall {
   font-size: var(--font-size-tiny);
   height: var(--sizing-xsmall);
   line-height: var(--sizing-xsmall);
 }
-.cc--badge--small {
+.badge--small {
   font-size: var(--font-size-small);
   height: var(--sizing-small);
   line-height: var(--sizing-small);
 }
-.cc--badge--medium {
+.badge--medium {
   font-size: var(--font-size-medium);
   height: var(--sizing-medium);
   line-height: var(--sizing-medium);
@@ -64,7 +64,7 @@
 // Colors
 // @each $colorsMap in ($colors, $shades) {
 //   @each $name, $color in $colorsMap {
-//     .cc--badge--#{$name} {
+//     .badge--#{$name} {
 //       background-color: $color;
 
 //       &.solid {
