@@ -1,8 +1,12 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-}
+// Core
+@import './styles/core/typography';
+
+// Themes
+@import './styles/themes/base';
+@import './styles/themes/dark';
+
+// UI
+@import './styles/ui/badge';
+@import './styles/ui/button';
+@import './styles/ui/empty';
+@import './styles/ui/input';
