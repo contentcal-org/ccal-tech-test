@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { User } from '../../../../libs/core/src';
 
 @Component({
   selector: 'ccal-apps-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'idea-board';
+  user$: Observable<User> = new Subject();
 }

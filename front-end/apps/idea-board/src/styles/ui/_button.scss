@@ -1,3 +1,26 @@
+// Color variant
+@mixin cc-button-color($bgColor, $fontColor) {
+  color: $bgColor;
+
+  &.button--solid {
+    background-color: $bgColor;
+    border-color: rgba(187, 187, 187, 0.2);
+    color: $fontColor;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+
+    &.hover:not([disabled]),
+    &:hover:not([disabled]) {
+      box-shadow: inset 0 0 0 100vw rgba(255, 255, 255, 0.15);
+    }
+
+    &.active:not([disabled]),
+    &:active:not([disabled]) {
+      box-shadow: inset 0 0 0 100vw rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
 // Default
 .button {
   align-items: center;
@@ -59,13 +82,13 @@
 }
 
 // Fluid
-.button--fluid {
+.button.button--fluid {
   display: flex;
   width: 100%;
 }
 
 // Expanded
-.button--expanded {
+.button.button--expanded {
   height: var(--sizing-large);
   min-width: var(--sizing-large);
   padding-left: 2rem;
@@ -73,23 +96,28 @@
 }
 
 // Sizes
-.button--tiny {
+.button.button--tiny {
   font-size: var(--font-size-tiny);
   height: var(--sizing-tiny);
   min-width: var(--sizing-tiny);
 }
-.button--xsmall {
+.button.button--xsmall {
   font-size: var(--font-size-xsmall);
   height: var(--sizing-xsmall);
   min-width: var(--sizing-xsmall);
 }
-.button--small {
+.button.button--small {
   font-size: var(--font-size-small);
   height: var(--sizing-small);
   min-width: var(--sizing-small);
 }
-.button--large {
+.button.button--large {
   font-size: var(--font-size-large);
   height: var(--sizing-large);
   min-width: var(--sizing-large);
+}
+
+// Colors
+.button.button--primary {
+  @include cc-button-color(var(--aqua), #ffffff);
 }

@@ -1,1 +1,15 @@
+<header class="header">
+  <div class="header__content">
+    <div>
+      <img src="/assets/logo/ccal-master.svg" height="30" />
+    </div>
+    <div *ngIf="user$ | async; else loggedOut">
+      <a [routerLink]="['/auth', 'logout']">Logout</a>
+    </div>
+    <ng-template #loggedOut>
+      <a [routerLink]="['/auth', 'login']">Login</a>
+    </ng-template>
+  </div>
+</header>
+
 <router-outlet></router-outlet>
