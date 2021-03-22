@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { State, Action, StateContext, StateToken, Selector } from '@ngxs/store';
 import { AuthLogin, AuthLogout } from './auth.actions';
@@ -12,7 +12,7 @@ export const AUTH_STATE_TOKEN = new StateToken<User>('auth');
 })
 @Injectable()
 export class AuthState {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private zone: NgZone) {}
 
   @Selector([AUTH_STATE_TOKEN])
   static isAuthenticated(state: User): boolean {
@@ -22,12 +22,16 @@ export class AuthState {
   @Action(AuthLogin)
   login(ctx: StateContext<User>) {
     ctx.setState({ id: '1', name: 'Mr User', isAdmin: false });
-    return this.router.navigate(['/ideas']);
+    this.zone.run(() => {
+      this.router.navigate(['/ideas']);
+    });
   }
 
   @Action(AuthLogout)
   logout(ctx: StateContext<User>) {
     ctx.setState(null);
-    return this.router.navigate(['/']);
+    this.zone.run(() => {
+      this.router.navigate(['/']);
+    });
   }
 }
