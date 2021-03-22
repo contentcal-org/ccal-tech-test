@@ -12,11 +12,17 @@
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "ccal-apps", "style": "camelCase" }
+          { "type": "attribute", "prefix": "ccal", "style": "camelCase" }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "ccal-apps", "style": "kebab-case" }
+          { "type": "element", "prefix": "ccal", "style": "kebab-case" }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Page"]
+          }
         ]
       }
     },

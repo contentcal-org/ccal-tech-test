@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { User } from '../../../../libs/core/src';
+import { User } from '@ccal-apps/core';
 
 @Component({
-  selector: 'ccal-apps-root',
+  selector: 'ccal-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
