@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from '../environments/environment';
-import { AuthState } from '@ccal-apps/core';
+import { AuthState, DarkModeState } from '@ccal-apps/core';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxsModule.forRoot([AuthState], {
+    NgxsModule.forRoot([AuthState, DarkModeState], {
       developmentMode: !environment.production,
     }),
     NgxsStoragePluginModule.forRoot(),

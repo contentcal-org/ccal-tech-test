@@ -7,7 +7,12 @@
       <div class="header__theme">
         🌞
         <label class="header__dark-mode-toggle toggle">
-          <input class="toggle__checkbox" type="checkbox" />
+          <input
+            class="toggle__checkbox"
+            type="checkbox"
+            [checked]="useDarkMode$ | async"
+            (change)="changeDarkMode($event.target.checked)"
+          />
           <div class="toggle__switch"></div>
         </label>
         🌚
