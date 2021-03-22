@@ -1,5 +1,5 @@
 export interface Idea {
-  ide: string;
+  id: string;
   name: string;
   description: string;
   tagIds: string[];

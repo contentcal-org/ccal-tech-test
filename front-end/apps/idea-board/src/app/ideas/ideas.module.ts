@@ -6,7 +6,10 @@ import { IdeasListPage } from './ideas-list/ideas-list.page';
 import { IdeasEditPage } from './ideas-edit/ideas-edit.page';
 import { IdeasPage } from './ideas.page';
 import { RouterModule } from '@angular/router';
-import { IdeasListingComponent } from './_components/ideas-listing/ideas-listing.component';
+import { IdeasListingComponent } from './ideas-list/_components/ideas-listing/ideas-listing.component';
+import { NgxsModule } from '@ngxs/store';
+import { IdeasState } from './_stores/ideas.state';
+import { IdeaTagsState } from './_stores/idea-tags.state';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,11 @@ import { IdeasListingComponent } from './_components/ideas-listing/ideas-listing
     IdeasPage,
     IdeasListingComponent,
   ],
-  imports: [CommonModule, RouterModule, IdeasRoutingModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    IdeasRoutingModule,
+    NgxsModule.forFeature([IdeasState, IdeaTagsState]),
+  ],
 })
 export class IdeasModule {}

@@ -15,7 +15,9 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
     NgxsModule.forRoot([AuthState, DarkModeState], {
       developmentMode: !environment.production,
     }),
-    NgxsStoragePluginModule.forRoot(),
+    NgxsStoragePluginModule.forRoot({
+      key: [AuthState, DarkModeState],
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
