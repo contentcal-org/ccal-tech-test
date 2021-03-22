@@ -31,7 +31,7 @@ export class AuthState {
   logout(ctx: StateContext<User>) {
     ctx.setState(null);
     this.zone.run(() => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/auth/login']);
     });
   }
 }

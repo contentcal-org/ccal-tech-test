@@ -1,6 +1,6 @@
 import { Idea } from '@ccal-apps/core';
 
-export class AddIdea {
+export class CreateIdea {
   static readonly type = '[Idea] Add idea';
   constructor(public idea: Idea) {}
 }

@@ -1,1 +1,13 @@
-<p>edit works!</p>
+<header class="page-header">
+  <div class="page-header__title">
+    <h1>Idea editor</h1>
+  </div>
+</header>
+
+<ccal-ideas-editor
+  [ideaTags]="ideaTags$ | async"
+  (createIdea)="createIdea($event)"
+  (updateIdea)="updateIdea($event)"
+  (deleteIdea)="deleteIdea($event)"
+  (cancel)="backToIdeas()"
+></ccal-ideas-editor>

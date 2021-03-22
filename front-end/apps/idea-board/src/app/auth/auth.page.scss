@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 3.125rem);
   width: 100%;
 
   &__card {

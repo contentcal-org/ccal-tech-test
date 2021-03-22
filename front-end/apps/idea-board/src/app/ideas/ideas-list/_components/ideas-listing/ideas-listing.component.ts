@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Idea, IdeaTag } from '@ccal-apps/core';
 
 @Component({
@@ -12,9 +12,6 @@ export class IdeasListingComponent {
 
   @Input()
   ideaTags: IdeaTag[] = [];
-
-  @Output()
-  deleteIdea = new EventEmitter<string>();
 
   getTagById(tagId: string): IdeaTag {
     return this.ideaTags.find((tag) => tag.id === tagId);

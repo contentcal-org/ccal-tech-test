@@ -121,3 +121,6 @@
 .button.button--primary {
   @include cc-button-color(var(--aqua), #ffffff);
 }
+.button.button--danger {
+  @include cc-button-color(var(--ruby), #ffffff);
+}

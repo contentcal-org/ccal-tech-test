@@ -10,6 +10,8 @@ import { IdeasListingComponent } from './ideas-list/_components/ideas-listing/id
 import { NgxsModule } from '@ngxs/store';
 import { IdeasState } from './_stores/ideas.state';
 import { IdeaTagsState } from './_stores/idea-tags.state';
+import { IdeasEditorComponent } from './ideas-edit/_components/ideas-editor/ideas-editor.component';
+import { IdeaTagComponent } from './_components/idea-tag/idea-tag.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { IdeaTagsState } from './_stores/idea-tags.state';
     IdeasEditPage,
     IdeasPage,
     IdeasListingComponent,
+    IdeasEditorComponent,
+    IdeaTagComponent,
   ],
   imports: [
     CommonModule,
