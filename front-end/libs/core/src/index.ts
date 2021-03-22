@@ -5,4 +5,3 @@ export * from './lib/_states/auth.state';
 export * from './lib/_states/auth.actions';
 export * from './lib/_states/dark-mode.state';
 export * from './lib/_states/dark-mode.actions';
-export * from './lib/_utilities/uuid';
