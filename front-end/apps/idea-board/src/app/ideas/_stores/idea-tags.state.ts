@@ -10,6 +10,4 @@ export const IDEA_TAGS_STATE_TOKEN = new StateToken<IdeaTag[]>('ideaTags');
   defaults: mockIdeaTags,
 })
 @Injectable()
-export class IdeaTagsState {
-  constructor() {}
-}
+export class IdeaTagsState {}

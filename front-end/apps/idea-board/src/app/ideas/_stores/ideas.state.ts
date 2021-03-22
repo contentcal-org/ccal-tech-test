@@ -13,8 +13,6 @@ export const IDEAS_STATE_TOKEN = new StateToken<Idea[]>('ideas');
 })
 @Injectable()
 export class IdeasState {
-  constructor() {}
-
   @Action(AddIdea)
   addIdea(ctx: StateContext<Idea[]>, action: AddIdea) {
     return ctx.setState(append([action.idea]));
