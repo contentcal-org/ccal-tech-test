@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { User } from '@ccal-apps/core';
+import { Observable } from 'rxjs';
+import { AuthState, User } from '@ccal-apps/core';
+import { Select } from '@ngxs/store';
 
 @Component({
   selector: 'ccal-root',
@@ -8,5 +9,6 @@ import { User } from '@ccal-apps/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  user$: Observable<User> = new Subject();
+  @Select(AuthState)
+  user$: Observable<User>;
 }
