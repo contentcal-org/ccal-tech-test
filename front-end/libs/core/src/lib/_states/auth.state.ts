@@ -16,7 +16,7 @@ export class AuthState {
 
   @Selector([AUTH_STATE_TOKEN])
   static isAuthenticated(state: User): boolean {
-    return !!state.id;
+    return !!state?.id;
   }
 
   @Action(AuthLogin)

@@ -17,7 +17,7 @@
         </label>
         🌚
       </div>
-      <div *ngIf="user$ | async; else loggedOut">
+      <div *ngIf="isAuthenticated$ | async; else loggedOut">
         <a [routerLink]="['/auth', 'logout']">Logout</a>
       </div>
       <ng-template #loggedOut>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthState, DarkModeState, UseDarkMode, User } from '@ccal-apps/core';
+import { AuthState, DarkModeState, UseDarkMode } from '@ccal-apps/core';
 import { Select, Store } from '@ngxs/store';
 
 @Component({
@@ -9,8 +9,8 @@ import { Select, Store } from '@ngxs/store';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  @Select(AuthState)
-  user$: Observable<User>;
+  @Select(AuthState.isAuthenticated)
+  isAuthenticated$: Observable<boolean>;
 
   @Select(DarkModeState)
   useDarkMode$: Observable<boolean>;
