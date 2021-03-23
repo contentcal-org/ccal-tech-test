@@ -40,6 +40,8 @@ We are currently working with...
 The Front-end challenge is to improve an idea board where you can create, view, update and delete ideas.
 There is a starter app built using NX or you can choose you use your own boilerplate.
 
+![idea-board](https://user-images.githubusercontent.com/8656036/112143530-47478b80-8bd8-11eb-9747-1ce0814fc942.png)
+
 ### Challange 1:
 
 Oops, seems like you can access our idea list even if you are not logged in just by entering `http://localhost:4200/ideas`.
