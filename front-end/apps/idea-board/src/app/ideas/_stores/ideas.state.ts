@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { State, Action, StateContext, StateToken } from '@ngxs/store';
+import {
+  State,
+  Action,
+  StateContext,
+  StateToken,
+  createSelector,
+} from '@ngxs/store';
 import { Idea } from '@ccal-apps/core';
 import { CreateIdea, RemoveIdea, UpdateIdea } from './ideas.actions';
 import { append, removeItem, updateItem } from '@ngxs/store/operators';
@@ -13,6 +19,12 @@ export const IDEAS_STATE_TOKEN = new StateToken<Idea[]>('ideas');
 })
 @Injectable()
 export class IdeasState {
+  static getIdeaById(ideaId: string) {
+    return createSelector([IdeasState], (state: Idea[]) => {
+      return state.find((idea) => idea.id === ideaId);
+    });
+  }
+
   @Action(CreateIdea)
   addIdea(ctx: StateContext<Idea[]>, action: CreateIdea) {
     return ctx.setState(append([action.idea]));

@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 3.125rem);
   width: 100%;
 
   &__card {
@@ -10,6 +9,7 @@
     border: var(--border);
     border-radius: var(--radius-large);
     max-width: 25rem;
+    margin: 4rem 0;
     padding: var(--spacing-large);
     width: 100%;
   }

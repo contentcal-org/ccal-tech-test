@@ -5,6 +5,7 @@
 </header>
 
 <ccal-ideas-editor
+  [idea]="idea$ | async"
   [ideaTags]="ideaTags$ | async"
   (createIdea)="createIdea($event)"
   (updateIdea)="updateIdea($event)"

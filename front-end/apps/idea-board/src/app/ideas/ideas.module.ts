@@ -12,6 +12,7 @@ import { IdeasState } from './_stores/ideas.state';
 import { IdeaTagsState } from './_stores/idea-tags.state';
 import { IdeasEditorComponent } from './ideas-edit/_components/ideas-editor/ideas-editor.component';
 import { IdeaTagComponent } from './_components/idea-tag/idea-tag.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { IdeaTagComponent } from './_components/idea-tag/idea-tag.component';
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
     IdeasRoutingModule,
     NgxsModule.forFeature([IdeasState, IdeaTagsState]),
   ],
