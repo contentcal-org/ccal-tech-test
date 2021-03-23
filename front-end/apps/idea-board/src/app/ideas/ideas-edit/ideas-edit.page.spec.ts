@@ -1,20 +1,28 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxsModule } from '@ngxs/store';
 
-import { EditPage } from './edit.page';
+import { IdeasEditPage } from './ideas-edit.page';
+import { IdeasEditorComponent } from './_components/ideas-editor/ideas-editor.component';
 
-describe('EditPage', () => {
-  let component: EditPage;
-  let fixture: ComponentFixture<EditPage>;
+describe('IdeasEditPage', () => {
+  let component: IdeasEditPage;
+  let fixture: ComponentFixture<IdeasEditPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditPage ]
-    })
-    .compileComponents();
+      imports: [
+        RouterTestingModule,
+        ReactiveFormsModule,
+        NgxsModule.forRoot([]),
+      ],
+      declarations: [IdeasEditPage, IdeasEditorComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditPage);
+    fixture = TestBed.createComponent(IdeasEditPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

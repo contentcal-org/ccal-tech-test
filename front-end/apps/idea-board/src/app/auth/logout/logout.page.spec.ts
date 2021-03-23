@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxsModule } from '@ngxs/store';
 
 import { LogoutPage } from './logout.page';
 
@@ -8,9 +9,9 @@ describe('LogoutPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogoutPage ]
-    })
-    .compileComponents();
+      imports: [NgxsModule.forRoot([])],
+      declarations: [LogoutPage],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxsModule } from '@ngxs/store';
 
 import { IdeasListPage } from './ideas-list.page';
+import { IdeasListingComponent } from './_components/ideas-listing/ideas-listing.component';
 
 describe('IdeasListPage', () => {
   let component: IdeasListPage;
@@ -8,7 +11,8 @@ describe('IdeasListPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [IdeasListPage],
+      imports: [RouterTestingModule, NgxsModule.forRoot([])],
+      declarations: [IdeasListPage, IdeasListingComponent],
     }).compileComponents();
   });
 
