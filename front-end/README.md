@@ -76,3 +76,8 @@ Could you please take a look what's going on?
 
 _Tip_: You will find the 'Delete' button if you go to edit mode for a particular idea. If you can't figure out where to start just open Dev tools and click
 that button.
+
+### Challange 5:
+
+We want to add some sorting/filtering functionality to the ideas board. Designs are not ready yet, but we can start working on some helper functions. Could you please
+finish all utilities function defined here `apps/idea-board/src/app/ideas/_utilities/ideas.utilities.ts` and add Unit Test for them?
