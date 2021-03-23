@@ -1,75 +1,78 @@
-# CcalApps
+# ContentCal Frontend Challenge
 
-The Front-end challenge is to make an idea board where you can create, view, update and delete ideas.
-
-There is a starter app built using NX or you can choose you use your own boilerplate.
+## Our Stack
 
 We are currently working with...
- * Typescript throughout the codebase
- * Nx build
- * Angular 10+
- * SCSS
- * Jest + cypress testing
- * Storybook as a rapid development tool and component library
- * We currently support the latest 2 versions of Edge, Chrome, Firefox and Safari
+
+- [Angular 10+](https://angular.io/)
+- [Typescript](https://www.typescriptlang.org/)
+- [NX](https://nx.dev/) Workspace
+- [NGXS](https://www.ngxs.io/) State Manager
+- [Jest](https://jestjs.io/) for Unit Testing
+- [Cypress](https://www.cypress.io/) for E2E testing
+- [Storybook](https://storybook.js.org/) as a rapid development tool and component library
+- SCSS - We currently support the latest 2 versions of Edge, Chrome, Firefox and Safari
 
 ## What we're looking for
 
- * A stylish solution with unit test coverage
- * Clean, concise code
- * an appreciation of design
- * A detailed README
- * A live site we can see (if possible)
- * Add you code to your favorite VCS and ping us your solution :)
+- A stylish solution with unit test coverage
+- Clean, concise code
+- an appreciation of design
 
+## Run the project
 
-## Using our NX starter
+1. Run `npm install`
+2. Run `npm start`
+3. Enter `http://localhost:4200`
 
-This project was generated using [Nx](https://nx.dev).
+### Running unit tests
 
-## NX Quick Start & Documentation
+- Run `npm run affected:test` to execute the unit tests via Jest on affected files only.
+- Run `npm run affected:test --all` to execute the unit tests via Jest on entire project.
 
-[Nx Documentation](https://nx.dev/angular)
+### Running linters
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+- Run `npm run affected:lint` to execute linter on affected files only.
+- Run `npm run affected:lint --all` to execute linter on entire project.
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+## Challange
 
-## Generate a library
+The Front-end challenge is to improve an idea board where you can create, view, update and delete ideas.
+There is a starter app built using NX or you can choose you use your own boilerplate.
 
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+### Challange 1:
 
-> You can also use any of the plugins above to generate libraries as well.
+Oops, seems like you can access our idea list even if you are not logged in just by entering `http://localhost:4200/ideas`.
+This module should be accessed only by logged-in users. Could you please protect it somehow?
 
-Libraries are shareable across libraries and applications. They can be imported from `@ccal-apps/mylib`.
+_Tip_: State will hold information about logged-in user. You can find `isAuthenticated` selector in `libs/core/src/lib/_states/auth.state.ts` that you can use.
 
-## Development server
+### Challange 2:
 
-Run `ng serve idea-board` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+One of our clients have hundreds or thousends of great ideas. Printing so long list of idea have very bad inpact on Angular performance.
+Could you please take a look on `IdeasListingComponent` (`apps/idea-board/src/app/ideas/ideas-list/_components/ideas-listing`) and check
+if we can easly optimalise this component performance?
 
-## Code scaffolding
+### Challange 3:
 
-Run `ng g component my-component --project=idea-board` to generate a new component.
+The dark mode is a must-have of all fancy apps those days, let's add it to our app.
 
-## Build
+_Tip_: All the logic is already there. You can start overriding styling in `apps/idea-board/src/styles/themes/_dark.scss`. Feel free to choose
+your own color scheme but if you do not have an idea for your own you can use those colors:
 
-Run `ng build idea-board` to build the project.
-Run `ng build ui` to build the UI libragy project.
+| Description                                               |  Color  |
+| --------------------------------------------------------- | :-----: |
+| App background                                            | #2f3337 |
+| Component bg color (cards, login box, top navigation etc) | #3f4346 |
+| Border color                                              | #828587 |
+| Dark border color (eg idea card hover border color)       | #bbbbbb |
+| Text color:                                               | #ffffff |
+| Lighter text color (eg input placeholders):               | #bbbbbb |
 
- The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Challange 4:
 
-## Running unit tests
+Some say it's a feature - not a bug as good ideas should never be deleted, but it seems that you cannot remove idea from our Ideas board.
+Could you please take a look what's going on?
 
-Run `ng test idea-board` to execute the unit tests via [Jest](https://jestjs.io).
-Run `ng test ui` to execute the unit tests via [Jest](https://jestjs.io).
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e idea-board-e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Running ui storybook
-
-npx ng run ui:storybook
+_Tip_: You will find the 'Delete' button if you go to edit mode for a particular idea. If you can't figure out where to start just open Dev tools and click
+that button.
