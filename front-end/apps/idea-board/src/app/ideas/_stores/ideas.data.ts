@@ -23,7 +23,7 @@ export const mockIdeas: Idea[] = [
   {
     id: 'idea-4',
     name: 'Coffee break',
-    description: 'Coffee break increase developers performance',
+    description: 'Coffee break increases developers performance',
     tagIds: ['tag-1'],
   },
   {
@@ -48,7 +48,7 @@ export const mockIdeas: Idea[] = [
   {
     id: 'idea-8',
     name: 'Mobile App',
-    description: `Let's build mobile app`,
+    description: `Let's build a mobile app`,
     tagIds: ['tag-3'],
   },
 ];

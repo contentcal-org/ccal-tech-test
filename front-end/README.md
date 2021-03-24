@@ -50,9 +50,9 @@ _Tip_: State will hold information about logged-in user. You can find `isAuthent
 
 ### Challange 2:
 
-One of our clients have hundreds or thousends of great ideas. Printing so long list of idea have very bad inpact on Angular performance.
+One of our clients has hundreds or thousands of great ideas. Printing such a long list of ideas has a very bad impact on Angular performance.
 Could you please take a look on `IdeasListingComponent` (`apps/idea-board/src/app/ideas/ideas-list/_components/ideas-listing`) and check
-if we can easly optimalise this component performance?
+if we can easily optimise this component performance?
 
 ### Challange 3:
 
@@ -71,7 +71,7 @@ _Tip_: All the logic is already there. You can start overriding styling in `apps
 
 ### Challange 4:
 
-Some say it's a feature - not a bug as good ideas should never be deleted, but it seems that you cannot remove idea from our Ideas board. Could you please take a look what's going on?
+Some say "it's a feature - not a bug", as good ideas should never be deleted, but it seems that you cannot remove idea from our Ideas board. Could you please take a look what's going on?
 
 _Tip_: You will find the 'Delete' button if you go to edit mode for a particular idea. If you can't figure out where to start just open Dev tools and click that button.
 
