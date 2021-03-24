@@ -50,9 +50,7 @@ _Tip_: State will hold information about logged-in user. You can find `isAuthent
 
 ### Challange 2:
 
-One of our clients has hundreds or thousands of great ideas. Printing such a long list of ideas has a very bad impact on Angular performance.
-Could you please take a look on `IdeasListingComponent` (`apps/idea-board/src/app/ideas/ideas-list/_components/ideas-listing`) and check
-if we can easily optimise this component performance?
+One of our clients has hundreds or thousands of great ideas. Printing such a long list of ideas has a very bad impact on Angular performance. Could you please take a look on `IdeasListingComponent` (`apps/idea-board/src/app/ideas/ideas-list/_components/ideas-listing`) and check if we can easily optimise this component performance?
 
 ### Challange 3:
 
