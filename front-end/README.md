@@ -2,7 +2,7 @@
 
 ## Our Stack
 
-We are currently working with...
+We are currently working with and what has been implmented in this tech test is ...
 
 - [Angular 10+](https://angular.io/)
 - [Typescript](https://www.typescriptlang.org/)
@@ -42,21 +42,47 @@ There is a starter app built using NX or you can choose you use your own boilerp
 
 ![idea-board](https://user-images.githubusercontent.com/8656036/112143530-47478b80-8bd8-11eb-9747-1ce0814fc942.png)
 
-### Challange 1:
+### Challange 1: Protect your ideas
 
-Oops, seems like you can access our idea list even if you are not logged in just by entering `http://localhost:4200/ideas`. This module should be accessed only by logged-in users. Could you please protect it somehow?
+Oops, seems like you can access your idea list even if you are not logged in just by entering `http://localhost:4200/ideas`.
 
-_Tip_: State will hold information about logged-in user. You can find `isAuthenticated` selector in `libs/core/src/lib/_states/auth.state.ts` that you can use.
+Your ideas should be accessed only by logged-in users. Could you please protect it somehow?
 
-### Challange 2:
+_Tip_: State will hold information about logged-in user  `isAuthenticated` selector in `libs/core/src/lib/_states/auth.state.ts` that you can use.
 
-One of our clients has hundreds or thousands of great ideas. Printing such a long list of ideas has a very bad impact on Angular performance. Could you please take a look on `IdeasListingComponent` (`apps/idea-board/src/app/ideas/ideas-list/_components/ideas-listing`) and check if we can easily optimise this component performance?
+### Challange 2: optimise your idea
 
-### Challange 3:
+One of our clients has hundreds or thousands of great ideas, and they experienced that rendering long lists can impact the app performance. 
+
+__Refator__ the `IdeasListingComponent` (`apps/idea-board/src/app/ideas/ideas-list/_components/ideas-listing`) to optimise this component performance.
+
+### Challange 3: enhance your ideas
+
+Designs are not ready yet, but we want to use some of your creative thinking to extend the ideas
+
+1. Include a creation date on each idea
+2. Add filtering and sorting to make is easier to locate your idea.
+    - sort by date
+    - sort by name
+    - filter by tags
+    - filter by idea
+3. Write tests for the sorting and filtering functions
+
+We stated on the utilities function to help out - some defined here `apps/idea-board/src/app/ideas/_utilities/ideas.utilities.ts`.
+
+_Tip_: Run `npm run affected:test --watch`.
+
+## Extra credits
+
+If you feel like going the extra mile then here are some more challenges
+
+### Challange a: darken your idea
 
 The dark mode is a must-have of all fancy apps those days, let's add it to our app.
 
-_Tip_: All the logic is already there. You can start overriding styling in `apps/idea-board/src/styles/themes/_dark.scss`. Feel free to choose your own color scheme but if you do not have an idea for your own you can use those colors:
+_Tip_: All the logic is already there and we use `scss` and `@ngxs/store`
+
+Feel free to choose your own color scheme but if you do not have an idea for your own you can use those colors:
 
 | Description                                               |  Color  |
 | --------------------------------------------------------- | :-----: |
@@ -67,14 +93,9 @@ _Tip_: All the logic is already there. You can start overriding styling in `apps
 | Text color:                                               | #ffffff |
 | Lighter text color (eg input placeholders):               | #bbbbbb |
 
-### Challange 4:
+### Challange b: delete an idea
 
-Some say "it's a feature - not a bug", as good ideas should never be deleted, but it seems that you cannot remove idea from our Ideas board. Could you please take a look what's going on?
+Deletion was partly implemented and will need to be completed
 
-_Tip_: You will find the 'Delete' button if you go to edit mode for a particular idea. If you can't figure out where to start just open Dev tools and click that button.
+_Tip_: we use `@ngxs/store`
 
-### Challange 5:
-
-We want to add some sorting/filtering functionality to the ideas board. Designs are not ready yet, but we can start working on some helper functions. Could you please finish all utilities function defined here `apps/idea-board/src/app/ideas/_utilities/ideas.utilities.ts` and add unit test for them?
-
-_Tip_: Run `npm run affected:test --watch`.
