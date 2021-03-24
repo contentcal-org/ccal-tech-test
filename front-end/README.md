@@ -73,7 +73,7 @@ your own color scheme but if you do not have an idea for your own you can use th
 
 ### Challange 4:
 
-Some say it's a feature - not a bug as good ideas should never be deleted, but it seems that you cannot remove idea from our Ideas board.
+Some say "it's a feature - not a bug", as good ideas should never be deleted, but it seems that you cannot remove idea from our Ideas board.
 Could you please take a look what's going on?
 
 _Tip_: You will find the 'Delete' button if you go to edit mode for a particular idea. If you can't figure out where to start just open Dev tools and click
