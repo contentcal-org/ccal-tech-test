@@ -12,6 +12,10 @@ We are currently working with and what has been implmented in this tech test is 
 - [Cypress](https://www.cypress.io/) for E2E testing
 - [Storybook](https://storybook.js.org/) as a rapid development tool and component library
 - SCSS - We currently support the latest 2 versions of Edge, Chrome, Firefox and Safari
+- [Auth0](https://auth0.com/) for Authentication
+- [FileStack](https://filestack.com) for files uploads and transformations
+- [AWS Amplify](https://aws.amazon.com/amplify/hosting/) for hosting / stage enviroments generation
+- [GitHub Actions](https://github.com/features/actions) for automation, CI/CD
 
 ## What we're looking for
 
